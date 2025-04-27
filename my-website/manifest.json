@@ -1,6 +1,6 @@
 {
-  "name": "iMovieHub",
-  "short_name": "iMovieHub",
+  "name": "iMovie-Hub",
+  "short_name": "iMovie-Hub",
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#121212",
