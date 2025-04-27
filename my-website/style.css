@@ -1,0 +1,218 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #0d0d0d;
+  color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+}
+
+.navbar-logo img {
+  height: 50px;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-search input {
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  margin-right: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+
+.navbar-search button {
+  padding: 8px 15px;
+  background: #ff0055;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  color: white;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+#banner-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#banner-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* Watch Now Button */
+.watch-now-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.watch-now-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 50px;
+  background: linear-gradient(90deg, #ff0055, #ff6600);
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.watch-now-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+.content {
+  padding: 2rem;
+}
+
+.row h2 {
+  margin-bottom: 1rem;
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+}
+
+.list img {
+  width: 100%;
+  height: 225px;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.list img:hover {
+  transform: scale(1.05);
+}
+
+/* Modal Player */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 800px;
+}
+
+.close-btn {
+  font-size: 30px;
+  cursor: pointer;
+  float: right;
+  color: white;
+}
+
+#player-iframe {
+  width: 100%;
+  height: 400px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+#server-selector {
+  padding: 10px;
+  border-radius: 10px;
+  background: #222;
+  color: white;
+  border: none;
+}
+
+/* Toast */
+#toast {
+  visibility: hidden;
+  min-width: 250px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+  padding: 16px;
+  position: fixed;
+  z-index: 10000;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  font-size: 17px;
+  opacity: 0;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  background: #111;
+  text-align: center;
+}
+
+.footer-links a {
+  color: #bbb;
+  margin: 0 10px;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+  padding: 10px;
+}
