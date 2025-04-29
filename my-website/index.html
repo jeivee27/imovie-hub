@@ -111,7 +111,7 @@
 
 <!-- ✅ Smart PopAd Script Trigger After First Interaction -->
 <script type="text/javascript" data-cfasync="false">
-/*<![CDATA[/* */
+/*<![CDATA[*/
 (function() {
   let popAdTriggered = false;
 
@@ -119,35 +119,55 @@
     if (popAdTriggered) return;
     popAdTriggered = true;
 
-    (function(){
-      var u = window, s = "a802d495ddc8a34a1c9a42aefc2f52d5",
-      h = [["siteId", 794+583*129*366*521-14335727189], ["minBid",0], ["popundersPerIP","0"], ["delayBetween",0], ["default",false], ["defaultPerDay",0], ["topmostLayer","auto"]],
-      d = ["d3d3LmJsb2NrYWRzbm90LmNvbS9uVHJlYW50Lm1pbi5jc3M=","ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC9WbGN1L2xiYWNrYm9uZS1taW4uanM="],
-      o = -1, w, c, z = function() {
-        clearTimeout(c);
-        o++;
-        if (d[o] && !(1771811538000 < (new Date).getTime() && 1 < o)) {
-          w = u.document.createElement("script");
-          w.type = "text/javascript";
-          w.async = true;
-          var i = u.document.getElementsByTagName("script")[0];
-          w.src = "https://" + atob(d[o]);
-          w.crossOrigin = "anonymous";
-          w.onerror = z;
-          w.onload = function() {
+    (function() {
+      var u = window,
+          s = "a802d495ddc8a34a1c9a42aefc2f52d5",
+          h = [
+            ["siteId", 794 + 583 * 129 * 366 * 521 - 14335727189],
+            ["minBid", 0],
+            ["popundersPerIP", "0"],
+            ["delayBetween", 0],
+            ["default", false],
+            ["defaultPerDay", 0],
+            ["topmostLayer", "auto"]
+          ],
+          d = [
+            "d3d3LmJsb2NrYWRzbm90LmNvbS9uVHJlYW50Lm1pbi5jc3M=",
+            "ZG5oZmk1bm4yZHQ2Ny5jbG91ZGZyb250Lm5ldC9WbGN1L2xiYWNrYm9uZS1taW4uanM="
+          ],
+          o = -1,
+          w,
+          c,
+          z = function() {
             clearTimeout(c);
-            u[s.slice(0,16)+s.slice(0,16)] || z();
+            o++;
+            if (d[o] && !(1771811538000 < (new Date()).getTime() && o > 1)) {
+              w = u.document.createElement("script");
+              w.type = "text/javascript";
+              w.async = true;
+              var i = u.document.getElementsByTagName("script")[0];
+              w.src = "https://" + atob(d[o]);
+              w.crossOrigin = "anonymous";
+              w.onerror = z;
+              w.onload = function() {
+                clearTimeout(c);
+                if (!u[s.slice(0, 16) + s.slice(0, 16)]) {
+                  z();
+                }
+              };
+              c = setTimeout(z, 5000);
+              i.parentNode.insertBefore(w, i);
+            }
           };
-          c = setTimeout(z, 5000);
-          i.parentNode.insertBefore(w, i);
-        }
-      };
+
       if (!u[s]) {
-        try { Object.freeze(u[s] = h); } catch(e) {}
+        try {
+          Object.freeze(u[s] = h);
+        } catch (e) {}
         z();
       }
     })();
-    
+
     document.removeEventListener('click', triggerPopAd);
     document.removeEventListener('scroll', triggerPopAd);
     document.removeEventListener('keydown', triggerPopAd);
@@ -158,8 +178,8 @@
   document.addEventListener('keydown', triggerPopAd);
 
 })();
-/*]]>/* */
+/*]]>*/
 </script>
-
+  
 </body>
 </html>
